@@ -1,0 +1,16 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+
+<div class= "jumbotron">
+    Hi You are Logged In!
+    <form action="GET">
+    {% for h in img %} 
+            <div class="col-md-4"> 
+                    {{ h.name }} 
+                     <img src="{{ h.profile_pic.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+            </div> 
+    {% endfor %} </form>
+    
+</div>
+
+{% endblock %}
